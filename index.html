@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Todo</title>
+<link rel="stylesheet" href="index.css"> 
+</head>
+<body>
+ <header>
+    <h1><b  style="font-size: xx-large; font-weight:800; color:black;">Todo List</b></h1>
+    <h3  style="font-size: large; font-weight:800; color:black">Pendings or Important tasks</h3>
+    <form id="new-task-form">
+     <input type="text" name="new-task-input" id="new-task-input" style="font-size: xx-large; font-weight:800;" placeholder="What do you have planned?" />
+      <input type="submit" id="new-task-submit" style="font-size: large; font-weight:900;" value="Add task" />
+    </form>
+    </header>
+    <main>
+        <section class="task-list">
+            <h2>Tasks</h2>
+            <div id="tasks">
+            </div>
+        </section>
+    </main>
+<script src="https://unpkg.com/dexie/dist/dexie.js"></script>
+<script src="index.js"></script>
+<script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js");
+      });
+    }
+</script>
+<script src="manifext.json"></script>
+</body>
+</html>

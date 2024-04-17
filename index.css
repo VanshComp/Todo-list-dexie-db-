@@ -1,0 +1,116 @@
+:root {
+    --dark: #05152E;
+    --darker: #1F2937;
+    --darkest: #001E3C;
+    --grey: #6B7280;
+    --pink: #EC4899;
+    --purple: #8B5CF6;
+    --light: #EEE;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Fira Sans", sans-serif;
+    background-image: linear-gradient(to bottom right, var(--dark), var(--darker));
+    color: var(--light);
+}
+
+header {
+    background-color: var(--grey);
+    padding: 1rem;
+    border-radius: 0 0 1rem 1rem;
+    text-align: center;
+}
+
+h1 {
+
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+#new-task-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+#new-task-input {
+    flex: 1;
+    background-color: var(--darker);
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem 0 0 1rem;
+    color: var(--light);
+}
+
+#new-task-submit {
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    border: none;
+    color: var(--light);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    border-radius: 0 1rem 1rem 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#new-task-submit:hover {
+    opacity: 0.8;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.task-list h2 {
+    font-size: 1.5rem;
+    color: var(--grey);
+    margin-bottom: 1rem;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.task:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task .content {
+    flex: 1;
+}
+
+.task .content .text {
+    font-size: 1.125rem;
+    transition: color 0.3s ease;
+}
+
+.task .actions button {
+    background-color: transparent;
+    border: none;
+    color: var(--pink);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.task .actions button:hover {
+    color: var(--purple);
+}
